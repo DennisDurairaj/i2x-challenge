@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import Login from '../components/login/Login';
-import List from '../components/recording/RecordingList';
+import RecordingList from '../components/recording/RecordingList';
+import requireAuth from '../utils/authorization/requireAuth';
+import jwt from 'jsonwebtoken';
 
 export default class App extends Component {
   render() {
     return (
       <div className="container">
         <Nav />
-        <Route exact path='/' component={Login} />
-        <Route path='/list' component={List} />
+        {/* <Route exact path='/' component={Login} /> */}
+        <Route exact path='/' render={() => (
+          localStorage.jwtToken ? (
+            <Redirect to='/list' />
+          ) : (
+            <Login />
+          )
+        )}/>
+        <Route path='/list' component={requireAuth(RecordingList)} />
       </div>
     );
   }

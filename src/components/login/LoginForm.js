@@ -33,7 +33,7 @@ export default class LoginForm extends Component {
       this.setState({errors: {}});
       const { errors, ...data } = this.state;
       this.props.login(JSON.stringify(data)).then(
-        (res) => this.context.router.history.push('/'),
+        (res) => this.context.router.history.push('/list'),
         (err) => {
           debugger;
           this.setState({errors: err.response.data})

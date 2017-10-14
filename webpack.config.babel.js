@@ -33,6 +33,7 @@ export default {
   devServer : {
     contentBase: './public',
     port: 9000,
+    historyApiFallback: true,
     hot: true
   },
   plugins : [
