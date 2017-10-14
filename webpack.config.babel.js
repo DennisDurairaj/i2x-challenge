@@ -32,7 +32,7 @@ export default {
   devtool : 'source-map',
   devServer : {
     contentBase: './public',
-    port: 9001,
+    port: 9000,
     hot: true
   },
   plugins : [

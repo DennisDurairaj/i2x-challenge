@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import InputFieldGroup from '../shared/InputFieldGroup';
 import validateLogin from '../../utils/validations/login/validateLogin';
 
@@ -32,8 +33,9 @@ export default class LoginForm extends Component {
       this.setState({errors: {}});
       const { errors, ...data } = this.state;
       this.props.login(JSON.stringify(data)).then(
-        (res) => this.context.router.history.push('/list'),
+        (res) => this.context.router.history.push('/'),
         (err) => {
+          debugger;
           this.setState({errors: err.response.data})
         }
       )
@@ -71,4 +73,12 @@ export default class LoginForm extends Component {
       </div>
     )
   }
+}
+
+LoginForm.contextTypes = {
+  router: PropTypes.object.isRequired
+}
+
+LoginForm.PropTypes = {
+  login: PropTypes.func.isRequired
 }
