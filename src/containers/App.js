@@ -11,7 +11,6 @@ export default class App extends Component {
     return (
       <div className="container-fluid">
         <Nav />
-        {/* <Route exact path='/' component={Login} /> */}
         <Route exact path='/' render={() => (
           localStorage.jwtToken ? (
             <Redirect to='/list' />

@@ -14,7 +14,6 @@ class RecordingList extends Component {
   componentDidMount() {
     this.props.fetchRecordingList().then(
       (res) => {
-        // console.log(res);
         this.setState({ recordings: res.results });
       },
       (err) => {

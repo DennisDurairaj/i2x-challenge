@@ -1,7 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 
-const PUBLIC_DIR = path.resolve(__dirname, "public");
+const PUBLIC_DIR = path.resolve(__dirname, "server");
 const SRC_DIR = path.resolve(__dirname, "src");
 
 export default {
@@ -31,7 +31,7 @@ export default {
   },
   devtool : 'source-map',
   devServer : {
-    contentBase: './public',
+    contentBase: './server',
     port: 9001,
     historyApiFallback: true,
     hot: true
