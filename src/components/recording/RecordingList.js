@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRecordingList } from '../../actions/fetchListActions';
-import RecordingListItem from './RecordingListItem';
+import RecordingListItem from '../recording/RecordingListitem';
 import moment from 'moment';
 
 class RecordingList extends Component {
