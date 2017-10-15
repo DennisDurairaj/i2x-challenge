@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot",
+    "postinstall": "webpack -p",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Dennis Durairaj",
