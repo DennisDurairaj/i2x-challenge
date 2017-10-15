@@ -28,7 +28,8 @@
     "redux-thunk": "^2.2.0",
     "styled-components": "^2.2.1",
     "superagent": "^3.6.3",
-    "validator": "^9.0.0"
+    "validator": "^9.0.0",
+    "webpack": "^3.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
