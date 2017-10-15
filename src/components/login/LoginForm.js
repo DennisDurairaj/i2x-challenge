@@ -9,7 +9,8 @@ export default class LoginForm extends Component {
     this.state = {
       "email": '',
       "password": '',
-      "errors": {}
+      "errors": {},
+      isLoading: false      
     }
   }
   validationsCheck() {
@@ -30,20 +31,20 @@ export default class LoginForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     if (this.validationsCheck()) {
-      this.setState({errors: {}});
+      this.setState({ errors: {}, isLoading: true });
       const { errors, ...data } = this.state;
       this.props.login(JSON.stringify(data)).then(
         (res) => this.context.router.history.push('/list'),
         (err) => {
           debugger;
-          this.setState({errors: err.response.data})
+          this.setState({errors: err.response.data, isLoading: false });
         }
       )
     }
   }
 
   render() {
-    const {errors, email, password} = this.state;
+    const {errors, email, password, isLoading} = this.state;
     return (
       <div>
         <form onSubmit={this.onSubmit}>
@@ -65,7 +66,7 @@ export default class LoginForm extends Component {
             onChange={this.onChange}/>
 
           <div className="form-group">
-            <button className="btn btn-primary btn-lg">
+            <button className="btn btn-primary btn-lg" disabled={isLoading}>
               Login
             </button>
           </div>

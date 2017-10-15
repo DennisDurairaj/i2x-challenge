@@ -9,7 +9,7 @@ import jwt from 'jsonwebtoken';
 export default class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <Nav />
         {/* <Route exact path='/' component={Login} /> */}
         <Route exact path='/' render={() => (

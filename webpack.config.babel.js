@@ -17,12 +17,12 @@ export default {
       {
         test: /\.js$/,
         include: path.join(__dirname, 'src'),
-        use: {
+        use: [{
           loader: 'babel-loader',
           options: {
             presets: ['env', 'stage-0', 'react']
           }
-        }
+        }]
       }
     ]
   },
@@ -32,13 +32,12 @@ export default {
   devtool : 'source-map',
   devServer : {
     contentBase: './public',
-    port: 9000,
+    port: 9001,
     historyApiFallback: true,
     hot: true
   },
   plugins : [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery"})
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 }
