@@ -12,7 +12,7 @@
 
 ## Instructions to deploy the app on Heroku
 
-1. Download & Install the Heroku CLI from [I'm an inline-style link](https://devcenter.heroku.com/articles/heroku-command-line)
+1. Download & Install the Heroku CLI from [Heroku-CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
 2. Open terminal and login to your heroku account `heroku login`
 
