@@ -1,6 +1,6 @@
 ## Instructions to run the app locally
 
-1. git clone the repo on your machine `git clone https://github.com/DennisDurairaj/i2x-challenge.git`
+1. git clone the repo on your machine `git clone https://github.com/DennisDurairaj/fullstack-react.git`
 
 2. Change directory to i2x-challenge `cd i2x-challenge`
 
