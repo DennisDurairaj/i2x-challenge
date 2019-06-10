@@ -21,5 +21,3 @@
 4. Change directory to i2x-challenge-dennis `cd i2x-challenge-dennis`
 
 5. Now if you are an admin or have collaborator permissions, you can make changes and deploy them to heroku by running `git add .` `git commit -m "Your commit message"` `git push heroku master`
-
-#### Link to live demo is [here](https://i2x-challenge-dennis.herokuapp.com/)
