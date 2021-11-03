@@ -28,7 +28,7 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "styled-components": "^2.2.1",
-    "validator": "^9.0.0",
+    "validator": "^13.7.0",
     "webpack": "^3.7.1",
     "webpack-merge": "^4.1.0"
   },
